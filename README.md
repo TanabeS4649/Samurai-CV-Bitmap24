@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./cpu/image/output/samurai.bmp", width="300">
+    <img src="./cpu/image/output/samurai.jpg", width="300">
 </div>
 
 Samurai::CV::Bitmap24 is a library about computer vision.
