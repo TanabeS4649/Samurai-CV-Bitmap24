@@ -13,8 +13,8 @@ Samurai::CV::Bitmap24::Image *read_image(char *filename)
     2. Check height and width of image
     3. Read data of image
 
-  Data structure of Bitmap which have 24 bit:
-    [0:1] File type
+  Data structure of 24 bit bitmap image:
+    [0:1] File type, "BM"
     [2:5] File size (byte unit)
     [6:7] Reservation, 0
     [8:9] Reservation, 0
@@ -96,33 +96,6 @@ Samurai::CV::Bitmap24::Image *read_image(char *filename)
 
 int write_bmp(char *filename, Samurai::CV::Bitmap24::Image *img)
 {
-/*
-
-  Flow chart:
-    1. Read header file
-    2. Check height and width of image
-    3. Read data of image
-
-  Data structure of Bitmap which have 24 bit:
-    [0:1] File type
-    [2:5] File size (byte unit)
-    [6:7] Reservation, 0
-    [8:9] Reservation, 0
-    [10:13] Start byte address of data, 54
-    [14:17] Size of header, 40
-    [18:21] Width of image
-    [22:25] Height of image
-    [26:27] Number of plane, 1
-    [28:29] What number of bit is this bitmap file?
-    [30:33] Comppressed image?, 0
-    [34:37] Size of image, width * height * 3
-    [38:41] Resolution of horizontal, 0
-    [42:45] Resolution of vertical, 0
-    [46:49] Number of pallet, 0
-    [50:53] Index of important pallet, 0
-    [54:xx] Data of image
-
-*/
 
   FILE *fp;
   unsigned int real_width;
